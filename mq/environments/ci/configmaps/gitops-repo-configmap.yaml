@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  labels:
+    app: multi-tenancy-gitops
+    group: pipeline
+    type: git
+  name: gitops-repo
+data:
+  branch: master
+  host: github.com
+  org: MQ-dynamic-mqsc-20062022
+  owner: MQ-dynamic-mqsc-20062022
+  parentdir: .
+  protocol: https
+  repo: multi-tenancy-gitops-apps
+  url: https://github.com/MQ-dynamic-mqsc-20062022/multi-tenancy-gitops-apps.git
