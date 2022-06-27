@@ -9,19 +9,19 @@ spec:
   template:
     pod:
       containers:
-        - env:
-            - name: MQSNOAUT
-              value: 'yes'
-          name: qmgr
-          volumeMounts:
-            - name: config-volume-scripts
-              mountPath: /mq-config
-              # readOnly: true
-              #optional: true
-            - name: dynamic-config-volume-mqsc
-              mountPath: /dynamic-mq-config-mqsc
-              # readOnly: true
-              #optional: true
+      - name: qmgr
+        env:
+        - name: MQSNOAUT
+          value: "yes"
+        volumeMounts:
+          - name: config-volume-scripts
+            mountPath: /mq-config
+            readOnly: true
+            #optional: true
+          - name: dynamic-config-volume-mqsc
+            mountPath: /dynamic-mq-config-mqsc
+            readOnly: true
+            #optional: true
       volumes:
         - name: config-volume-scripts
           configMap:
