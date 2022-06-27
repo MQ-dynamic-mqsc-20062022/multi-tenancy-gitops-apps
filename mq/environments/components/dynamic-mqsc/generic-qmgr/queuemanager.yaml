@@ -15,7 +15,7 @@ spec:
             defaultMode: 0777
         - name: dynamic-config-volume-mqsc
           configMap:
-            name: generic-qmgr-dynamic-mqsc-configmap
+            name: dynamic-mqsc-configmap
             defaultMode: 0777
 
       containers:
